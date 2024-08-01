@@ -1,0 +1,31 @@
+theme = "adwaita-dark"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner","file-name"]
+center = ["diagnostics","position-percentage"]
+right = ["selections", "position", "file-encoding", "file-line-ending", "file-type","total-line-numbers"]
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+"'" = "'"
+
+[editor.indent-guides]
+render = true
