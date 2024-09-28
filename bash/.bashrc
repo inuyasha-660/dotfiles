@@ -1,12 +1,23 @@
-# PS1
-PS1="\[\e[1;34m\]# \[\e[1;36m\]\u \[\e[1;0m\]@ \[\e[1;32m\]\h \[\e[1;0m\]in \[\e[1;33m\]\w \[\e[1;0m\][\[\e[1;0m\]\t\[\e[1;0m\]]\n\[\e[1;31m\]$\[\e[0m\] "
+#
+# ~/.bashrc
+#
 
-# Alias
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 alias la='ls -A'
 alias ll='ls -alF'
 alias l='ls -CF'
 alias sudo='sudo '
 
 # Env
-export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+export PATH="$PATH:$(go env GOBIN):~/.local/bin:$(go env GOPATH)/bin"
+
+# vimode
+set -o vi
+bind '"kj":vi-movement-mode'
+
+# colorful prompt
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
