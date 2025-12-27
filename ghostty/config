@@ -39,6 +39,10 @@ auto-update-channel = stable
 clipboard-read = allow
 clipboard-write = allow
 
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
