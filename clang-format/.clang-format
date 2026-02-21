@@ -1,0 +1,12 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+UseTab: Never
+BreakBeforeBraces: Linux
+AlignConsecutiveDeclarations: true
+AlignEscapedNewlines: Left
+AllowShortLoopsOnASingleLine: true
+BraceWrapping:
+  AfterStruct: true
+
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false
